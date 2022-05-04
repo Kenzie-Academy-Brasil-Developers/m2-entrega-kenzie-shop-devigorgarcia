@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,500;0,600;0,900;1,100;1,500;1,900&family=Inter:wght@400;700&display=swap');
+
+:root {
+    --font-: 'Archivo', sans-serif;
+    --font-name: 'Inter', sans-serif;
+}
+
+
+h1 {
+    font-family: var(--font-);
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 65px;
+    margin: 48px 0 0 58px;
+}
+
+main {
+    margin: 24px auto;
+    max-width: 1114px;
+    max-height: 1612px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.produto-Card {
+    max-width: 227px;
+    max-height: 472px;
+    padding: 8px;
+    margin-bottom: 14px;
+}
+
+img {
+    width: 227px;
+    height: 224px;
+    padding: 8px;
+}
+
+.produto-Content {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0 14px 8px;
+}
+
+.produto-content-nome{
+    font-family: var(--font-name);
+    font-size: 16px;
+    line-height: 24px;
+    width: 227px;
+    margin-bottom: 17px;
+    color: #19191D;
+}
+
+.produto-content-preco {
+    font-family: var(--font-name);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    color:  rgba(0, 0, 0, 0.87);
+    margin-bottom: 10px;
+}
+
+.produto-content-btn{
+    width: 88px;
+    background-color: white;
+    border: 1px solid #9DC2FF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: var(--font-name);
+    width: 500;
+    font-style: Medium;
+    font-size: 14px;
+    color: #2264D1;
+    padding: 8px;
+}
