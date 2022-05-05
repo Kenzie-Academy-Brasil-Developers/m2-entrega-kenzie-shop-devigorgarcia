@@ -44,6 +44,10 @@ img {
     margin: 24px 0 14px 8px;
 }
 
+.ratingHolder {
+    margin: 10px 0;
+}
+
 .produto-content-nome{
     font-family: var(--font-name);
     font-size: 16px;

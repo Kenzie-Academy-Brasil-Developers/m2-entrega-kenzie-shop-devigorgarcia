@@ -4,6 +4,7 @@ class Vitrine {
     static main = document.querySelector('#main');
 
     static mostrarVitrine (produtos){
+
         produtos.forEach((produto) => {
             const produtoCard = document.createElement('div');
             const produtoImg = document.createElement('img');
@@ -23,13 +24,19 @@ class Vitrine {
             const imageUrl = `https://kenzie-academy-brasil.gitlab.io/fullstack/frontend/modulo2/sprint3/img/consumindo-api-produtos/${produto.id}/Image.png`;
             
             
-            let produtoObj = Products.createProduct(imageUrl, null, produto.productName, produto.price, produto.price);
+            let produtoObj = Products.createProduct(imageUrl, produto.reviews, produto.productName, produto.price, produto.promotionStatus);
 
             produtoImg.src = produtoObj.imagem;
             produtoImg.alt = produtoObj.productName;
 
+            for(let i = 0; i < produtoObj.estrelas; i++){
+                const spanStars = document.createElement('span')
+                spanStars.innerText = "⭐"
+                produtoContentStars.appendChild(spanStars)
+            }
+
             produtoContentNome.innerText = produtoObj.descricao;
-            produtoContentPreco.innerText = `R$ ${produtoObj.preco},00`;
+            produtoContentPreco.innerText = `R$ ${produtoObj.preco.toFixed(2).replaceAll('.',',')}`;
             produtoContentBtn.innerText = "Comprar"
 
             produtoContent.append(produtoContentStars, produtoContentNome, produtoContentPreco, produtoContentBtn);
